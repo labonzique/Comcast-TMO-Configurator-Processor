@@ -1,0 +1,52 @@
+{   
+    "cell_mapping": {
+        "Location Details": {
+            "D14": "tower_name", 
+            "E14": "Site Address", 
+            "G14": "City", 
+            "H14": "State", 
+            "I14": "Zip", 
+            "T14": "contact_name",  
+            "U14": "contact_phone", 
+            "V14": "contact_email", 
+            "AD14":"evc1", 
+            "AE14": "evc2", 
+            "AF14": "uni", 
+            "AG14": "cvlan"}
+    },
+
+    "directories":    {
+        "msg_dir":"./_msgs", 
+        "output_dir": "./_output_result/",
+        "tmp_dir": "./_tmp_dir"},
+
+    "tmo_circuits": {
+        "tmo_lookup_path": "./data_lookups/tmo_circuits_database.csv",
+        "tmo_columns_mapping": {
+            "evc_column": "EVC ID",
+            "uni_column": "A End (U)NI ID",
+            "bw_column": "EVC Bandwidth (Mbps)",
+            "cvlan_column": "CVLAN",
+            "tower_column": "Tower Name"
+        },
+        "uni_target_header": "LTP ECCKT QTY",
+        "uni_uniq_keys": ["KGGS", "KEGS", "KRGS", "KFGS"],
+        "evc_target_header": "EVCNUM NC EVCID NUT OAM_INDSVP MSFS CEV_P CEV_CP",
+        "evc_uniq_keys": "VLXP"
+    },
+
+    "site_lookup":{
+        "df_of_sites_dir": "./data_lookups/site_look_up.xlsx",
+        "site_column_name": "Site Name",
+        "address_column_names": ["Site Address","City", "State"]
+    },
+    
+    "config_templates": {
+        "market": "TMO", 
+        "path": {
+           "bawa": "./template_files/CONFIGURATOR-TMO-BAWA-SITE.xlsm"
+        }
+    }
+}
+
+
